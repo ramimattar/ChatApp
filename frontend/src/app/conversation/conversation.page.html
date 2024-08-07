@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Conversation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let message of messages">
+      <ion-label>
+        <h3>{{ message.sender.username }}</h3>
+        <p>{{ message.content }}</p>
+        <p class="timestamp">{{ message.timestamp | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-input [(ngModel)]="newMessage" placeholder="Type a message..."></ion-input>
+      <ion-button (click)="sendMessage()">Send</ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

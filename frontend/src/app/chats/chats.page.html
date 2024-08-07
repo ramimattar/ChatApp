@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let chat of chats" (click)="openChat(chat._id)">
+      <ion-label>
+        <h2>{{ chat.participants[0].username }}</h2>
+        <p>{{ chat.lastMessage?.content }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
