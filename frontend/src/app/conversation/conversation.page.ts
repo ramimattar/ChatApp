@@ -20,7 +20,7 @@ export class ConversationPage implements OnInit {
     private route: ActivatedRoute,
     private chatService: ChatService,
     private socket: Socket
-  ) { }
+  ) { } 
 
   ngOnInit() {
     this.chatId = this.route.snapshot.paramMap.get('id')!;
