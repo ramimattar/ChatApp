@@ -37,7 +37,7 @@ export class ConversationPage implements OnInit {
     this.socket.emit('joinGroup', { chatId: this.chatId, userName: this.userName });
   }
 
-  sendMessage() {
+  sendMessage() { 
     const message = {
       chatId: this.chatId,
       content: this.newMessage,
